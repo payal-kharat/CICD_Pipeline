@@ -1,0 +1,15 @@
+name : "react ci-cd pipeline"
+
+on:
+  push:
+     brances:
+          -main
+          -master
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest    
+    steps:
+       - name : "setup node js"    
+         uses : "actions/setup-node@14" 
+         with : node-version : '21' 
